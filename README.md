@@ -126,7 +126,7 @@ $$
 \Phi(\mathbf{P}_G) \;=\; F(\mathbf{P}_G)
 \;+\; \lambda \,\Delta P^{\,2}
 \;+\; \lambda \sum_{j=1}^{N_G}\Big[\max\big(0,\;Q_{G,j}-Q_{G,j}^{\max}\big)^2 + \max\big(0,\;Q_{G,j}^{\min}-Q_{G,j}\big)^2\Big]
-\;+\; 10^{9}\,\mathbb{1}\!\left[\text{FDLF diverged}\right]
+\;+\; 10^{9}\,\mathbf{1}\!\left[\text{FDLF diverged}\right]
 $$
 
 where
@@ -247,7 +247,7 @@ $$
 y_{i,j}^{t+1} =
 \begin{cases}
 y_{i,j}^{t} \;+\; p_1\left(P_{i,j}^{t} - G_j^{t}\right) r_2 \;+\; p_2\left(G_j^{t} - y_{i,j}^{t}\right) r_1, & r_i \ge P_p \\[8pt]
-y_{i,j}^{t} \;+\; \mu \left[ \left(u_j - l_j\right) r_3 + l_j \right] \cdot \operatorname{sgn}(r_4 - 0.5), & r_i < P_p
+y_{i,j}^{t} \;+\; \mu \left[ \left(u_j - l_j\right) r_3 + l_j \right] \cdot \mathrm{sgn}(r_4 - 0.5), & r_i < P_p
 \end{cases}
 $$
 
@@ -346,7 +346,7 @@ w_j \;=\;
 \lambda_j\,\chi_j, & \Delta < 0 \quad \text{(back off the expensive units first)}
 \end{cases}
 \qquad
-P_{G,j} \leftarrow \operatorname{clip}\!\left( P_{G,j} + \Delta\,\frac{w_j}{\sum_{k \in \mathcal{A}} w_k},\; P_{G,j}^{\min},\; P_{G,j}^{\mathrm{eff}} \right)
+P_{G,j} \leftarrow \mathrm{clip}\!\left( P_{G,j} + \Delta\,\frac{w_j}{\sum_{k \in \mathcal{A}} w_k},\; P_{G,j}^{\min},\; P_{G,j}^{\mathrm{eff}} \right)
 $$
 
 where $\chi_j$ is a fresh logistic-map iterate. This is a stochastic relaxation of the classical equal-incremental-cost condition $\lambda_1 = \lambda_2 = \cdots = \lambda_{N_G}$: the repair pushes the dispatch *toward* the merit order without deterministically enforcing it, so the operator restores feasibility while preserving population diversity. Repair is applied after **each** of the three CSA phases.
@@ -376,14 +376,14 @@ Trials execute across **8 worker processes** via `multiprocessing.Pool.imap_unor
 
 | Metric | Best | Mean | Worst | Std Dev |
 |---|---|---|---|---|
-| **Fuel cost ($/h)** | 834.8087 | 860.6465 | 934.5993 | 31.3258 |
+| **Fuel cost (\$/h)** | 834.8087 | 860.6465 | 934.5993 | 31.3258 |
 | **Active loss (MW)** | 7.6020 | 9.7278 | 13.8504 | 1.6785 |
 
 Total wall-clock: **132.34 s** (00h 02m 12s), 8 workers.
 
 **Best dispatch — trial 30, burn-in offset 2900:**
 
-| Gen | Bus | $P_G$ (MW) | $P^{\min}$ | $P^{\max}$ | $P^{\mathrm{eff}}$ | Util (%) | Cost ($/h) |
+| Gen | Bus | $P_G$ (MW) | $P^{\min}$ | $P^{\max}$ | $P^{\mathrm{eff}}$ | Util (%) | Cost (\$/h) |
 |---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | 1 | 124.7998 | 50.00 | 200.00 | 185.00 | 49.87 | 308.0059 |
 | 2 | 2 | 69.8666 | 20.00 | 80.00 | 74.00 | 83.11 | 207.6899 |
@@ -406,14 +406,14 @@ Voltage profile stays within $[0.9979,\,1.0513]$ p.u. across all 30 buses; no bu
 
 | Metric | Best | Mean | Worst | Std Dev |
 |---|---|---|---|---|
-| **Fuel cost ($/h)** | 14232.5850 | 14536.1844 | 14851.8895 | 154.7433 |
+| **Fuel cost (\$/h)** | 14232.5850 | 14536.1844 | 14851.8895 | 154.7433 |
 | **Active loss (MW)** | 68.5804 | 80.9553 | 101.5077 | 7.1100 |
 
 Total wall-clock: **2244.50 s** (00h 37m 24s), 8 workers.
 
 **Best dispatch — trial 4, burn-in offset 300:**
 
-| Gen | Bus | $P_G$ (MW) | $P^{\min}$ | $P^{\max}$ | $P^{\mathrm{eff}}$ | Util (%) | Cost ($/h) |
+| Gen | Bus | $P_G$ (MW) | $P^{\min}$ | $P^{\max}$ | $P^{\mathrm{eff}}$ | Util (%) | Cost (\$/h) |
 |---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | 1 | 87.2517 | 50.00 | 300.00 | 275.00 | 14.90 | 741.6016 |
 | 2 | 2 | 280.1017 | 50.00 | 450.00 | 410.00 | 57.53 | 1581.9202 |
@@ -447,7 +447,7 @@ Two generators (buses 23 and 61) sit exactly at $Q^{\max} = 150$ MVAr — these 
 
 ### Reading the distributions
 
-The 30-bus results are visibly **bimodal**: 19 trials converge into the 834–851 $/h band while 8 land in the 890–935 $/h band, and the higher-cost cluster is systematically accompanied by higher losses ($\approx$ 11.4–13.9 MW versus $\approx$ 8.3–9.2 MW). This is not noise — it is a distinct local basin, and the valve-point ripple is the natural suspect. The coefficient of variation is 3.6 %.
+The 30-bus results are visibly **bimodal**: 19 trials converge into the 834–851 \$/h band while 8 land in the 890–935 \$/h band, and the higher-cost cluster is systematically accompanied by higher losses ($\approx$ 11.4–13.9 MW versus $\approx$ 8.3–9.2 MW). This is not noise — it is a distinct local basin, and the valve-point ripple is the natural suspect. The coefficient of variation is 3.6 %.
 
 The 62-bus distribution is unimodal with a coefficient of variation of 1.06 %, which is the expected signature of a smooth quadratic objective in higher dimensions: no cost ripple, no basin structure, just dispersion around a single attractor. Power-balance error stays below $6\times10^{-3}$ MW on all 30 trials — roughly two parts in $10^{6}$ of demand.
 
