@@ -1,0 +1,169 @@
+########################################################### IEEE 30-BUS SYSTEM ###########################################################
+
+Total demand: 283.40 MW
+Buses: 30, Branches: 42, Generators: 6
+[parent] FDLF cache pre-warmed. Cache keys present: [(2608961787904, 2608961654144, 0)]
+[parent] Launching 8 parallel workers for 30 trials...
+Trial 03: burn-in offset 200 → fuel cost 842.0712 $/h, active loss 8.6700 MW, P-balance error 0.000053 MW
+Trial 05: burn-in offset 400 → fuel cost 836.5065 $/h, active loss 8.9066 MW, P-balance error 0.000365 MW
+Trial 08: burn-in offset 700 → fuel cost 840.1951 $/h, active loss 8.8988 MW, P-balance error 0.000268 MW
+Trial 02: burn-in offset 100 → fuel cost 839.5057 $/h, active loss 8.9776 MW, P-balance error 0.000063 MW
+Trial 06: burn-in offset 500 → fuel cost 837.1656 $/h, active loss 8.3765 MW, P-balance error 0.000316 MW
+Trial 07: burn-in offset 600 → fuel cost 837.1808 $/h, active loss 9.0557 MW, P-balance error 0.000142 MW
+Trial 01: burn-in offset   0 → fuel cost 891.6409 $/h, active loss 11.7135 MW, P-balance error 0.000201 MW
+Trial 04: burn-in offset 300 → fuel cost 894.7253 $/h, active loss 12.1589 MW, P-balance error 0.000214 MW
+Trial 09: burn-in offset 800 → fuel cost 837.8000 $/h, active loss 8.5380 MW, P-balance error 0.000091 MW
+Trial 10: burn-in offset 900 → fuel cost 837.8757 $/h, active loss 8.4864 MW, P-balance error 0.000134 MW
+Trial 13: burn-in offset 1200 → fuel cost 840.4335 $/h, active loss 8.5388 MW, P-balance error 0.000207 MW
+Trial 12: burn-in offset 1100 → fuel cost 843.7773 $/h, active loss 8.7391 MW, P-balance error 0.000109 MW
+Trial 11: burn-in offset 1000 → fuel cost 839.4754 $/h, active loss 9.2230 MW, P-balance error 0.000319 MW
+Trial 14: burn-in offset 1300 → fuel cost 890.0460 $/h, active loss 11.6497 MW, P-balance error 0.000015 MW
+Trial 15: burn-in offset 1400 → fuel cost 899.7724 $/h, active loss 11.3619 MW, P-balance error 0.000205 MW
+Trial 16: burn-in offset 1500 → fuel cost 842.3275 $/h, active loss 8.8771 MW, P-balance error 0.000210 MW
+Trial 18: burn-in offset 1700 → fuel cost 934.5993 $/h, active loss 7.6020 MW, P-balance error 0.000077 MW
+Trial 23: burn-in offset 2200 → fuel cost 841.3752 $/h, active loss 8.8887 MW, P-balance error 0.000224 MW
+Trial 22: burn-in offset 2100 → fuel cost 838.8178 $/h, active loss 8.3126 MW, P-balance error 0.000188 MW
+Trial 24: burn-in offset 2300 → fuel cost 839.7275 $/h, active loss 8.3165 MW, P-balance error 0.000261 MW
+Trial 21: burn-in offset 2000 → fuel cost 892.4107 $/h, active loss 12.2034 MW, P-balance error 0.000157 MW
+Trial 19: burn-in offset 1800 → fuel cost 897.1527 $/h, active loss 11.8908 MW, P-balance error 0.000162 MW
+Trial 17: burn-in offset 1600 → fuel cost 920.8870 $/h, active loss 13.8504 MW, P-balance error 0.000253 MW
+Trial 20: burn-in offset 1900 → fuel cost 899.8295 $/h, active loss 12.3149 MW, P-balance error 0.000031 MW
+Trial 26: burn-in offset 2500 → fuel cost 851.2490 $/h, active loss 9.0258 MW, P-balance error 0.001014 MW
+Trial 27: burn-in offset 2600 → fuel cost 837.8028 $/h, active loss 8.8106 MW, P-balance error 0.000212 MW
+Trial 28: burn-in offset 2700 → fuel cost 836.4243 $/h, active loss 8.8881 MW, P-balance error 0.000108 MW
+Trial 25: burn-in offset 2400 → fuel cost 904.6924 $/h, active loss 12.1673 MW, P-balance error 0.000043 MW
+Trial 29: burn-in offset 2800 → fuel cost 839.1206 $/h, active loss 8.7322 MW, P-balance error 0.000244 MW
+Trial 30: burn-in offset 2900 → fuel cost 834.8087 $/h, active loss 8.6597 MW, P-balance error 0.000186 MW
+
+[parent] All 30 trials complete. Best trial: 30 (fuel cost 834.8087 $/h)
+
+================================================================================
+Benchmark Results Summary
+================================================================================
+Trial Burn-in  Fuel Cost($/h) Active Loss (MW) P-balance Error (MW)
+--------------------------------------------------------------------------------
+    1       0        891.6409         11.7135             0.000201
+    2     100        839.5057          8.9776             0.000063
+    3     200        842.0712          8.6700             0.000053
+    4     300        894.7253         12.1589             0.000214
+    5     400        836.5065          8.9066             0.000365
+    6     500        837.1656          8.3765             0.000316
+    7     600        837.1808          9.0557             0.000142
+    8     700        840.1951          8.8988             0.000268
+    9     800        837.8000          8.5380             0.000091
+   10     900        837.8757          8.4864             0.000134
+   11    1000        839.4754          9.2230             0.000319
+   12    1100        843.7773          8.7391             0.000109
+   13    1200        840.4335          8.5388             0.000207
+   14    1300        890.0460         11.6497             0.000015
+   15    1400        899.7724         11.3619             0.000205
+   16    1500        842.3275          8.8771             0.000210
+   17    1600        920.8870         13.8504             0.000253
+   18    1700        934.5993          7.6020             0.000077
+   19    1800        897.1527         11.8908             0.000162
+   20    1900        899.8295         12.3149             0.000031
+   21    2000        892.4107         12.2034             0.000157
+   22    2100        838.8178          8.3126             0.000188
+   23    2200        841.3752          8.8887             0.000224
+   24    2300        839.7275          8.3165             0.000261
+   25    2400        904.6924         12.1673             0.000043
+   26    2500        851.2490          9.0258             0.001014
+   27    2600        837.8028          8.8106             0.000212
+   28    2700        836.4243          8.8881             0.000108
+   29    2800        839.1206          8.7322             0.000244
+   30    2900        834.8087          8.6597             0.000186
+
+================================================================================
+Statistical Summary (Fuel Cost and Active Losses)
+================================================================================
+                             Best         Mean        Worst      Std Dev
+--------------------------------------------------------------------------------
+     Fuel Cost ($/h)     834.8087     860.6465     934.5993      31.3258
+    Active Loss (MW)       7.6020       9.7278      13.8504       1.6785
+================================================================================
+
+
+================================================================================
+DETAILED RESULTS FOR THE BEST TRIAL
+================================================================================
+  Trial Number  : 30
+  Burn-in Offset: 2900
+  Fuel Cost     : 834.8087 $/h
+
+--------------------------------------------------------------------------------
+Generator Dispatch Table
+--------------------------------------------------------------------------------
+ Gen  Bus    P_G(MW)     Pmin     Pmax  Pmax_eff Util_eff(%)    Cost($/h)
+--------------------------------------------------------------------------------
+   1    1   124.7998    50.00   200.00    185.00    49.87     308.0059
+   2    2    69.8666    20.00    80.00     74.00    83.11     207.6899
+   3    5    23.7423    15.00    50.00     46.50    24.98      58.9732
+   4    8    29.3541    10.00    35.00     32.50    77.42     102.5872
+   5   11    20.5074    10.00    30.00     28.00    52.54      72.0361
+   6   13    23.7893    12.00    40.00     37.20    42.10      85.5162
+
+--------------------------------------------------------------------------------
+Voltage Profile
+--------------------------------------------------------------------------------
+ Bus   Type   |V|(pu)  Angle(deg)     Flag
+--------------------------------------------------------------------------------
+   1  Slack    1.0500      0.0000         
+   2     PV    1.0500     -2.6970         
+   3     PQ    1.0513     -4.6925     HIGH
+   4     PQ    1.0498     -4.3469         
+   5     PV    1.0500     -5.0841         
+   6     PQ    1.0492     -6.6999         
+   7     PQ    1.0476     -7.1439         
+   8     PV    1.0500     -7.8167         
+   9     PQ    1.0361     -9.7357         
+  10     PQ    1.0443    -12.0846         
+  11     PV    1.0500    -14.9758         
+  12     PQ    1.0472    -15.2022         
+  13     PV    1.0500    -16.6755         
+  14     PQ    1.0405    -17.9415         
+  15     PQ    1.0323    -18.3784         
+  16     PQ    1.0234    -18.9170         
+  17     PQ    1.0042    -20.0708         
+  18     PQ    1.0000    -20.5001         
+  19     PQ    1.0104    -19.5592         
+  20     PQ    1.0020    -19.2628         
+  21     PQ    0.9979    -18.7987         
+  22     PQ    1.0413    -16.5034         
+  23     PQ    1.0354    -17.5629         
+  24     PQ    1.0233    -19.1896         
+  25     PQ    1.0298    -19.0307         
+  26     PQ    1.0302    -20.7535         
+  27     PQ    1.0314    -20.7693         
+  28     PQ    1.0260    -22.3556         
+  29     PQ    1.0246    -22.8312         
+  30     PQ    1.0234    -23.0410         
+
+--------------------------------------------------------------------------------
+Reactive Power at Generators
+--------------------------------------------------------------------------------
+ Gen  Bus   Q_G(MVAr)     Qmin     Qmax     Flag
+--------------------------------------------------------------------------------
+   1    1    -37.9424     -inf      inf         
+   2    2     -5.9909   -20.00   100.00         
+   3    5     46.7504   -15.00    80.00         
+   4    8     55.1718   -15.00    60.00         
+   5   11     18.0291   -10.00    50.00         
+   6   13     20.9539   -15.00    60.00         
+
+--------------------------------------------------------------------------------
+Power Balance Summary
+--------------------------------------------------------------------------------
+  Total Generation   : 292.0595 MW
+  Total Demand       : 283.4000 MW
+  Total Active Losses: 8.6597 MW
+  P-balance Error    : 0.000186 MW
+  Total Fuel Cost    : 834.8087 $/h
+  Sum of Gen Costs   : 834.8084 $/h  (verification)
+================================================================================
+
+================================================================================
+Execution Time
+================================================================================
+  Total elapsed : 132.3443 seconds
+  Formatted     : 00h 02m 12.344s
+================================================================================
